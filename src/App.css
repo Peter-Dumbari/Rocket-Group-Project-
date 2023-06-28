@@ -22,8 +22,6 @@
   margin-right: 10px;
 }
 
-
-
 .nav .campany-name {
   font-size: 24px;
   line-height: 5px;
@@ -49,6 +47,7 @@
 .nav ul li .last {
   border-right: none;
 }
-.active{
+
+.active {
   text-decoration: underline !important;
 }
