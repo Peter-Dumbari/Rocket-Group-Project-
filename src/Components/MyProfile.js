@@ -1,12 +1,12 @@
 import React from 'react';
 import './Profile.css';
 import RocketProfile from './RocketProfile';
+import Missionprofile from './Missions/MissionProfile/Missionprofile';
 
 const Myprofile = () => (
   <div className="profile-container">
     <section className="mission-container">
-      <h1>My Missions</h1>
-      {/* Mession component should imported here */}
+      <Missionprofile />
     </section>
     <section className="rocket-Container">
       <h1>My Rockets</h1>
