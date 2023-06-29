@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   mission: [],
-  joinedMission: false,
+  joinedMission: [],
 };
 
 const missionSlice = createSlice({
@@ -11,10 +11,28 @@ const missionSlice = createSlice({
   reducers: {
     getMission: (state, action) => {
       state.mission = action.payload;
-      state.joinedMission = false;
+    },
+    joinMission: (state, action) => {
+      const missionId = action.payload;
+      const mission = state.mission.find(
+        (mission) => mission.mission_id === missionId,
+      );
+      if (mission) {
+        mission.reserved = true;
+        state.joinedMission.push(mission);
+      }
+    },
+    leaveMission: (state, action) => {
+      const missionId = action.payload;
+      state.mission = state.mission.map((mission) => (mission.mission_id === missionId
+        ? { ...mission, reserved: false }
+        : mission));
+      state.joinedMission = state.joinedMission.filter(
+        (mission) => mission.mission_id !== missionId,
+      );
     },
   },
 });
 
 export default missionSlice.reducer;
-export const { getMission } = missionSlice.actions;
+export const { getMission, joinMission, leaveMission } = missionSlice.actions;

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 function Status({ join }) {
   return (
     <div className={join ? 'member' : 'not_a_member'}>
-      {join ? 'NOT A MEMBER' : 'Active Member'}
+      {join ? 'Active Member' : 'NOT A MEMBER'}
     </div>
   );
 }
