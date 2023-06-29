@@ -9,6 +9,7 @@ const Rockets = () => {
   useEffect(() => {
     dispatch(getData());
   }, [dispatch]);
+
   if (error) {
     return <div>{error.message}</div>;
   }

@@ -4,7 +4,9 @@
   text-align: start;
   gap: 10%;
 }
-
 .profile-container .rocket-Container {
+  width: 50%;
+}
+.profile-container .mission-container{
   width: 50%;
 }
