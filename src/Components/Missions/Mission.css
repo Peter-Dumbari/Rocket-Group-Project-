@@ -30,9 +30,8 @@
 }
 
 tr:nth-child(even) {
-  background-color:  #f2f2f2;
+  background-color: #f2f2f2;
 }
-
 
 .mission_table tbody tr td:nth-child(1) {
   width: 12%;
