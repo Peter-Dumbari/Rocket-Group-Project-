@@ -1,0 +1,15 @@
+.rocket-list {
+  border: 1px solid #efefef;
+  border-bottom: none;
+  text-align: start;
+  width: 100%;
+}
+
+.rocket-list p {
+  border-bottom: 1px solid #efefef;
+}
+
+.rocket-list p h4 {
+  padding-left: 15px;
+  color: rgb(105, 104, 104);
+}
