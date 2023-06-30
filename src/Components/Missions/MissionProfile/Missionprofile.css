@@ -14,14 +14,14 @@
   text-align: left;
 }
 
-.mission_profile h2{
+.mission_profile h2 {
   margin: 19px 6px 6px 0;
 }
+
 .joined-missions ul {
   list-style-type: none;
   padding: 0;
   border-radius: 5px;
-  
 }
 
 .joined-missions ul li {
