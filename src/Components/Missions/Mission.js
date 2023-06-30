@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import MissionsDatas from './MissionsDatas';
-import './Mission.css';
+// import './Mission.css';
 
 function Mission() {
   const { mission } = useSelector((state) => state.mission);
