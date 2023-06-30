@@ -8,9 +8,11 @@ import Rockect from './Components/Rockect';
 import Mission from './Components/Missions/Mission';
 import Myprofile from './Components/MyProfile';
 import { getMission } from './redux/Mission/missionSlice';
+import { getData } from './redux/Rocket/rocketSlice';
 import Url from './redux/Mission/MissionUrl';
 
 function App() {
+  const rocketUrl = 'https://api.spacexdata.com/v3/rockets';
   const dispatch = useDispatch();
 
   React.useEffect(() => {
@@ -18,6 +20,16 @@ function App() {
       .get(Url)
       .then((res) => {
         dispatch(getMission(res.data));
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, [dispatch]);
+  React.useEffect(() => {
+    axios
+      .get(rocketUrl)
+      .then((respond) => {
+        dispatch(getData(respond.data));
       })
       .catch((err) => {
         console.log(err);
