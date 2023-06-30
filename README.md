@@ -130,9 +130,9 @@ Example:
 
 👤 **Gergito**
 
-<!-- - GitHub: [@Peter-Dumbari](https://github.com/Peter-Dumbari)
-- Twitter: [@Lazkkidy](https://twitter.com/Lazkkidy)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/peter-kinz-7aa419235/) -->
+- GitHub: [@Gergito K](https://github.com/gergitokusse)
+- Twitter: [@Gerg-man](https://twitter.com/gergito)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/gergitokusse/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>..
 
