@@ -1,6 +1,6 @@
-import React from "react";
-import { useSelector } from "react-redux";
-import MissionsDatas from "./MissionsDatas";
+import React from 'react';
+import { useSelector } from 'react-redux';
+import MissionsDatas from './MissionsDatas';
 
 function Mission() {
   const { mission } = useSelector((state) => state.mission);
@@ -16,8 +16,8 @@ function Mission() {
             </tr>
           </thead>
           <tbody className="mission_table">
-            {mission &&
-              mission.map((item) => (
+            {mission
+              && mission.map((item) => (
                 <MissionsDatas key={item.id} data={item} />
               ))}
           </tbody>
