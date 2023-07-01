@@ -1,17 +1,18 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
-import configureStore from 'redux-mock-store';
-import Rockets from '../Components/Rockect';
+import store from '../redux/store';
+import Rocket from '../Components/Rockect';
 
-const mockStore = configureStore([]);
-
-test('renders Rockets component', () => {
-  const store = mockStore({ rockets: { rockets: [] } });
-
-  render(
-    <Provider store={store}>
-      <Rockets />
-    </Provider>,
-  );
+describe('Component test snapshot', () => {
+  it('Rockets renders correctly', () => {
+    const tree = renderer
+      .create(
+        <Provider store={store}>
+          <Rocket />
+        </Provider>,
+      )
+      .toJSON();
+    expect(tree).toMatchSnapshot();
+  });
 });
